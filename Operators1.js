@@ -32,4 +32,3 @@ var h = 2;
 var vol = Math.PI * (r**2) * h;
 // console.log(vol);
 console.log(Math.pow(r,2));
-
