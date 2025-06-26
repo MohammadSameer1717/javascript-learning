@@ -1,20 +1,18 @@
-var user1 = {
-    name: "xyz",
-    email: "xyz@gmail.com",
-    isActive: true,
-    address: "nksnldasnak",
-};
+var arr1 = [45, 56, 43, 20, 51, 66];
+var sum = 0;
 
-// for (let property in user1) {
-//     console.log("key : ", property);
-//     console.log("value :", user1[property]);
-// }
+arr1.forEach(function(element, Index) {
+    console.log(Index, element);
+    sum += element;
+});
+console.log(sum);
 
-var arr1 = [55, 44, 66, 34, 66];
+var arr1 = [35, 56, 47, 20, 51, 55];
+arr1.forEach(function(element, Index) {
+    console.log(Index, element);
+});
 
-for (let element of arr1) {
-    console.log(element);
-}
+
 
  var users = [
     {
@@ -62,14 +60,21 @@ for (let element of arr1) {
     },
  ];
 
- var sum = 0;
- var isActive = 0;
- for(var i = 0; i < users.length; i++) {
-    console.log(users[i].isActive); {
-    sum += users[i].age;
-    activeUsers += 1;
-    console.log(users[i].products);
+ users.forEach(function (item, Index) {
+    if (item, isActive) {
+        console.log(item);
     }
- } 
- console.log("Average age of active users : ", sum / activeUsers);
- 
+ });
+users.forEach(function (item, Index) {
+    if (item.age > 50) {
+        item.products.forEach(function (product, Index) {
+            console.log(product);
+        });
+    }
+});
+
+users.forEach(function(item, Index) {
+    item.contact = Math.floor(Math.random() *100000000000);
+    console.log(item);
+    
+});
