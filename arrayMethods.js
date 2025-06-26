@@ -78,3 +78,9 @@ users.forEach(function(item, Index) {
     console.log(item);
     
 });
+
+users.forEach(function(item, Index) {
+    item.contact = Math.floor(Math.random() *100000000000);
+    console.log(item);
+    
+});
