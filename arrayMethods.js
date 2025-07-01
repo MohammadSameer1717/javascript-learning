@@ -255,153 +255,153 @@ const { use } = require("react");
 //  console.log(elementIndex);
  
 
-  var users = [
-    {
-    name: "peter",
-    email: "peter@gmail.com",
-    email2: "sam@gmail.com",
-    isActive: true,
-    createdAt: new Date(),
-    products:["iphone", "airpods", "macbook"],  
-    age: 56
-    },
+//   var users = [
+//     {
+//     name: "peter",
+//     email: "peter@gmail.com",
+//     email2: "sam@gmail.com",
+//     isActive: true,
+//     createdAt: new Date(),
+//     products:["iphone", "airpods", "macbook"],  
+//     age: 56
+//     },
 
-    {
-    name: "salman",
-    email: "salman@gmail.com",
-    isActive: false,
-    createdAt: new Date(), 
-    products:["tresemme", "beardo gel", "phillips led"], 
-    age: 70  
-    },
+//     {
+//     name: "salman",
+//     email: "salman@gmail.com",
+//     isActive: false,
+//     createdAt: new Date(), 
+//     products:["tresemme", "beardo gel", "phillips led"], 
+//     age: 70  
+//     },
 
-   {
-    name: "samarth",
-    email: "samarth@gmail.com",
-    isActive: false,
-    createdAt: new Date(), 
-    products:["washing machin", "vivo", "job"],  
-    age: 30
-    },
-      {
-    name: "terenaam",
-    email: "terenaam@gmail.com",
-    isActive: true,
-    createdAt: new Date(), 
-    products:["washing machin", "vivo", "job"],  
-    age: 40
-    },
-      {
-    name: "goti",
-    email: "goti@gmail.com",
-    isActive: false,
-    createdAt: new Date(), 
-    products:["washing machin", "vivo", "job"],  
-    age: 60
-    },
- ];
+//    {
+//     name: "samarth",
+//     email: "samarth@gmail.com",
+//     isActive: false,
+//     createdAt: new Date(), 
+//     products:["washing machin", "vivo", "job"],  
+//     age: 30
+//     },
+//       {
+//     name: "terenaam",
+//     email: "terenaam@gmail.com",
+//     isActive: true,
+//     createdAt: new Date(), 
+//     products:["washing machin", "vivo", "job"],  
+//     age: 40
+//     },
+//       {
+//     name: "goti",
+//     email: "goti@gmail.com",
+//     isActive: false,
+//     createdAt: new Date(), 
+//     products:["washing machin", "vivo", "job"],  
+//     age: 60
+//     },
+//  ];
 
-var checkActive = users.some(function(item,Index) {
-    return item.isActive;
-});
+// var checkActive = users.some(function(item,Index) {
+//     return item.isActive;
+// });
 
- var check = users.every(function (item, Index) {
-    return item.isActive ;
- });
- console.log(checkActive);
- console.log(check);
+//  var check = users.every(function (item, Index) {
+//     return item.isActive ;
+//  });
+//  console.log(checkActive);
+//  console.log(check);
  
- var roles = ["admin", "employee", "superAdmin"];
- console.log(roles.includes("user"));
+//  var roles = ["admin", "employee", "superAdmin"];
+//  console.log(roles.includes("user"));
 
  
-const arr1 = [23,45,56,76,88];
-const arr2 = ['xyz', 'abc', 'pqr'];
-const arr4 = [45,86, false, new Date()];
-const arr3 = arr1.concat(arr2, arr4);
+// const arr1 = [23,45,56,76,88];
+// const arr2 = ['xyz', 'abc', 'pqr'];
+// const arr4 = [45,86, false, new Date()];
+// const arr3 = arr1.concat(arr2, arr4);
 
-// console.log(arr3);
+// // console.log(arr3);
 
-arr2.sort();
-console.log(arr2);
+// arr2.sort();
+// console.log(arr2);
 
-const arrNum = [45,16,23,74,10,8,96];
-arrNum.sort(function(a, b) {
-  return a - b;
-})
-console.log(arrNum);
+// const arrNum = [45,16,23,74,10,8,96];
+// arrNum.sort(function(a, b) {
+//   return a - b;
+// })
+// console.log(arrNum);
 
-const user = {
-  id: 101,
-  name: "peter",
-  address: "nwknjskmlcsc",
-  password: "12432422",
-  email: "peter@gmail.com",
-  isActive: true,
-};
+// const user = {
+//   id: 101,
+//   name: "peter",
+//   address: "nwknjskmlcsc",
+//   password: "12432422",
+//   email: "peter@gmail.com",
+//   isActive: true,
+// };
 
-const user1 = {
-  id:2,
-  name: "samarth",
-  address: "dkncjwkcodqpqklo",
-    password: "989432422",
-  email: "samarth@gmail.com",
-   isActive: false,
-}
+// const user1 = {
+//   id:2,
+//   name: "samarth",
+//   address: "dkncjwkcodqpqklo",
+//     password: "989432422",
+//   email: "samarth@gmail.com",
+//    isActive: false,
+// }
 
-console.log(user1);
-console.log(user);
+// console.log(user1);
+// console.log(user);
 
-// REST OPERATOR and 
+// // REST OPERATOR and 
 
-let user = {
-  id: 191,
-  name: "salman",
-  address: "nwknjskmlcsc",
-  password: "12432422",
-  email: "peter@gmail.com",
-  isActive: true,
-  products: ["products1", "products2", "products3"],
-};
+// let user = {
+//   id: 191,
+//   name: "salman",
+//   address: "nwknjskmlcsc",
+//   password: "12432422",
+//   email: "peter@gmail.com",
+//   isActive: true,
+//   products: ["products1", "products2", "products3"],
+// };
 
-let { id, name, email, isActive } = user;
-id: 55;
-console.log(id);
-console.log(user);
-
-
-let user = {
-  id: 191,
-  name: "salman",
-  address: "nwknjskmlcsc",
-  password: "12432422",
-  email: "peter@gmail.com",
-  isActive: true,
-  products: ["products1", "products2", "products3"],
-  class: {
-    id: 17,
-    className: "B.tech",
-    year: 2024,
-  },
-};
-
- let { products, email, ...userObj } = user;
- console.log(products);
- console.log(email)
- console.log(userObj);
+// let { id, name, email, isActive } = user;
+// id: 55;
+// console.log(id);
+// console.log(user);
 
 
+// let user = {
+//   id: 191,
+//   name: "salman",
+//   address: "nwknjskmlcsc",
+//   password: "12432422",
+//   email: "peter@gmail.com",
+//   isActive: true,
+//   products: ["products1", "products2", "products3"],
+//   class: {
+//     id: 17,
+//     className: "B.tech",
+//     year: 2024,
+//   },
+// };
 
- const { className, year } = user.class;
- console.log(className);
+//  let { products, email, ...userObj } = user;
+//  console.log(products);
+//  console.log(email)
+//  console.log(userObj);
 
- const { class: { className, year} } = user;
- console.log(className);
 
 
-const { class: classObj, ... userObj} = user;
-console.log(classObj);
-console.log(userObj);
+//  const { className, year } = user.class;
+//  console.log(className);
+
+//  const { class: { className, year} } = user;
+//  console.log(className);
+
+
+// const { class: classObj, ... userObj} = user;
+// console.log(classObj);
+// console.log(userObj);
 
 
 

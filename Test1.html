@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+    <script></script>
+    <style>
+        .card {
+            width: 300px;
+            background-color: bisque;
+            border: "2px solid black";
+            border-radius: "5px";
+            padding: "10px";
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <p class="test">Test paragraph</p>
+    </div> -->
+    <div class="test">
+        <p>Test paragraph</p>
+        <p>Test paragraph</p>
+        <p>Test paragraph</p>
+
+    </div>
+    <!-- <div>
+         <p class="test">Test paragraph</p>
+    </div> -->
+    <script>
+        let element = document.querySelector(".test");
+        setTimeout(() => {
+            <!-- element.setAttribute("class", "card"); -->
+            element.classList.add("card");
+            element.classList.remove("test");
+        }, 3000);
+
+        // let text = document.getElementById("test")
+// setTimeout(() => {
+//     text.innerText = "Text Changed";
+//     text.style.backgroundColor = "gray";
+// }, 3000);
+// let paragraphs = document.getElementsByTagName("peter");
+// console.log(paragraphs);
+
+
+
+// let paragraphs = document.getElementsByClassName("test");
+// // console.log(paragraphs);
+
+// Array.from(paragraphs).forEach((ele) => {
+//     ele.style.backgroundColor = "red";
+//     ele.style.border = "2px solid black";
+//     ele.style.borderRadius = "6px";
+// });
+
+// for (let index = 0; index < paragraphs.length; index++) {
+//     paragraphs[index].style.backgroundColor = "red";
+//     paragraphs[index].style.border = "2px solid black";
+//     paragraphs[index].style.borderRadius = "6px";
+// }
+
+
+// let para = document.querySelector("#second");
+// let paragraphs = document.querySelectorAll(".test");
+// para.style.backgroundColor = "green";
+
+// Array.from(paragraphs).forEach((ele) => {
+//     ele.style.backgroundColor = "red";
+// });
+
+// let division = document.getElementById("secondDiv");
+// setTimeout(() => {
+//     division.innerHTML = "<h1>Changed</h1>";
+// }, 3000);
+
+    </script>
+</body>
+</html>

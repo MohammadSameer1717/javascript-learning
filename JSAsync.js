@@ -1,95 +1,95 @@
-let user  = {
-    id: 2,
-    name: "pop",
-    email: "pop@gmail.com",
-    isActive: false,
-};
+// let user  = {
+//     id: 2,
+//     name: "pop",
+//     email: "pop@gmail.com",
+//     isActive: false,
+// };
 
-setTimeout(() => {
-    user.isActive = true;
-    console.log("test inside");
+// setTimeout(() => {
+//     user.isActive = true;
+//     console.log("test inside");
 
-    if (user.isActive) {
-    console.log(user.name);
+//     if (user.isActive) {
+//     console.log(user.name);
     
-}
-}, 3000);
+// }
+// }, 3000);
 
-console.log("test outside");
+// console.log("test outside");
 
-if (user.isActive) {
-    console.log(user.name);
-}
+// if (user.isActive) {
+//     console.log(user.name);
+// }
 
 
 
-// promises
-let user = {
-    id: 2,
-    name: "pop",
-    email: "pop@gmail.com",
-    isActive: false,
-};
+// // promises
+// let user = {
+//     id: 2,
+//     name: "pop",
+//     email: "pop@gmail.com",
+//     isActive: false,
+// };
 
-const wait = (num) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            user.isActive = true;
-            resolve();
-        }, num);
-    });
-};
+// const wait = (num) => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             user.isActive = true;
+//             resolve();
+//         }, num);
+//     });
+// };
 
-// This is the correct structure
-async function main() {
-    await wait(3000); 
-    if (user.isActive) {
-        console.log(user.name); 
-    }
-}
-main();
-// this is a correct structures( callback hell swichtion )
-const fetchUser = () => {
-    return {
-        id: 2,
-        name: "push",
-    };
-};
-const  userProducts = (userId) => {
+// // This is the correct structure
+// async function main() {
+//     await wait(3000); 
+//     if (user.isActive) {
+//         console.log(user.name); 
+//     }
+// }
+// main();
+// // this is a correct structures( callback hell swichtion )
+// const fetchUser = () => {
+//     return {
+//         id: 2,
+//         name: "push",
+//     };
+// };
+// const  userProducts = (userId) => {
 
-}
-const fetchUserDetails = () => {
-    fetchUser((userId) => {
-        const products = userProducts(userId, (productsId) =>{
-            const category = productscategory(productsId)
-        });
-    });
-};
+// }
+// const fetchUserDetails = () => {
+//     fetchUser((userId) => {
+//         const products = userProducts(userId, (productsId) =>{
+//             const category = productscategory(productsId)
+//         });
+//     });
+// };
 
-let user  = {
-    id: 2,
-    name: "pop",
-    email: "pop@gmail.com",
-    isActive: false,
-};
+// let user  = {
+//     id: 2,
+//     name: "pop",
+//     email: "pop@gmail.com",
+//     isActive: false,
+// };
 
-const wait = (num) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            user.isActive = true;
-            resolve();
-        }, num);
-    });
-};
-const checkUser = async () => {
-    console.log("first");
+// const wait = (num) => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             user.isActive = true;
+//             resolve();
+//         }, num);
+//     });
+// };
+// const checkUser = async () => {
+//     console.log("first");
 
-    await wait(3000);
-    if (user.isActive) {
-    }
-    console.log("second");
-};
-checkUser();
+//     await wait(3000);
+//     if (user.isActive) {
+//     }
+//     console.log("second");
+// };
+// checkUser();
 
 
 
