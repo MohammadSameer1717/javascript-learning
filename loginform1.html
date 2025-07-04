@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events 2 (NetflixSignin)</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+      }
+      .container-fluid {
+        height: 100vh;
+      }
+      .left-side {
+        background: url(https://img.etimg.com/photo/msid-96576274/jung_e.jpg)
+          no-repeat center center;
+        background-size: cover;
+        height: 100%;
+      }
+      .form-container {
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 40px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+      }
+      .form-control {
+        background-color: #333;
+        color: white;
+        border: none;
+      }
+      .form-control::placeholder {
+        color: #bbb;
+      }
+      .btn-netflix {
+        background-color: #e50914;
+        color: white;
+      }
+      .btn-netflix:hover {
+        background-color: #f6121d;
+      }
+      a {
+        color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row h-100">
+        <!-- Left Side: Image -->
+        <div class="col-md-6 d-none d-md-block left-side"></div>
+
+        <!-- Right Side: Sign In Form -->
+        <div
+          class="col-md-6 d-flex align-items-center justify-content-center bg-dark"
+        >
+          <div class="form-container">
+            <h2 class="mb-4">Sign In</h2>
+            <form>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Username"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-netflix w-100 mb-3"
+                id="submitbtn"
+              >
+                Sign In
+              </button>
+              <div class="d-flex justify-content-between mb-3">
+                <div>
+                  <input type="checkbox" id="rememberMe" />
+                  <label for="rememberMe"> Remember me</label>
+                </div>
+                <a href="#">Need help?</a>
+              </div>
+              <p class="mt-4">New to Netflix? <a href="#">Sign up now</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional for interactivity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let payload = {
+        username: "",
+        password: "",
+      };
+      const username = document.getElementById("Username");
+      const password = document.getElementById("password");
+
+      username.addEventListener("change", (e) => {
+        payload.username = e.target.value;
+      });
+
+      password.addEventListener("change", (e) => {
+        payload.password = e.target.value;
+      });
+
+      const button = document.getElementById("submitbtn");
+      button.addEventListener("click", () => {
+        alert(payload.username + "\n" + payload.password);
+      });
+    </script>
+  </body>
+</html>

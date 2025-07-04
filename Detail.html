@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <style>
+        .input-box {
+            border-bottom: 1px solid grey !important;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-radius: 0;
+            background-color: lightgrey;
+        }
+        .update-btn {
+            background-color: #f50708;
+            color: black;
+            border-radius: 2px;
+            box-shadow: 5px 5px black; 
+        }
+        .product-form {
+            max-width: 80%;
+            min-width: 60%;
+            margin-top: 200px;
+        }
+        @media screen and (max-width: 400px) {
+            .social-button {
+                border-radius: 999px;
+            }
+            .social-button > span {
+                display: none;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="mx-auto col-9 d-flex align-items-center justify-content-center"
+        >
+        <form class="login-form">
+            <div class="mb-3">
+                <label for="title" class="from-label">Product Title</label>
+                <input
+                type="text"
+                class="form-control input-bax"
+                id="title"
+                name="tltle"
+                placeholder="please enter the product tetle"
+                />
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">price</label>
+                   <input
+                type="Number"
+                class="form-control input-bax"
+                id="price"
+                name="price"
+                placeholder="please enter the product price"
+                />
+            </div>
+              <div class="mb-3">
+                <label for="category" class="form-label">category</label>
+                   <input
+                type="text"
+                class="form-control input-bax"
+                id="category"
+                name="category"
+                placeholder="please enter the product category"
+                />
+            </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                   <textarea
+                class="form-control input-bax"
+                id="descriptuon"
+                name="description"
+                placeholder="add description"
+                ></textarea>
+            </div>
+            <button
+            type="button"
+            class="btn btn-danger submit-btn w-100"
+            id="updateBtn"
+            >
+            Update
+        </button>
+        <div 
+        id="loader"
+         class="d-flex justify-content-center py-3 align-items-center visually-hidden"
+        >
+        <div class="spinner-border"
+        style="width: zrem; height: zrem"
+        role="status"
+        >
+        <span class="visually-hidder">loading...</span>
+    </div>
+    <p class="my-auto ms-3" style="font-size: 16px">loading page</p>
+    </div>
+        </form>
+
+        </div>
+
+    </div>
+    <script>
+
+            const Image = document.getElementById("productImage");
+            const title = document.getElementById("title");
+            const price = document.getElementById("price");
+            const category = document.getElementById("category");
+            const description = document.getElementById("description");
+
+            let payload = {};
+              
+
+            title.addEventListener("Change", (e) => {
+                payload.title = e.target.value;
+            });
+
+            price.addEventListener("Change", (e) => {
+                payload.price = Number(e.target.value);
+            });
+
+            description.addEventListener("Change", (e) => {
+                payload.description = e.target.value;
+            });
+
+            category.addEventListener("Change", (e) => {
+                payload.category = e.target.value;
+            });
+
+            const updateProduct = async () => {
+                const response = await fetch("/api/product",)
+            }
+
+        const fetchSingleProduct = async (paoductId) => {
+           try {
+            const response = await fetch (
+                'https://dummyjson.com/product/${product}'
+            );
+
+            if (response.status === 200) {
+                const productData = await response.json();
+
+             
+                title.value = productData.title;
+
+                  
+                price.value = productData.price;
+ 
+                 category.value = productData.category;
+
+                description.value = productData.description;
+
+                Image.src = productData.Image(0);
+
+            } else {
+                alert("Unable to fetch product details");
+            }
+           } catch (error) {
+            alert ("Unable to fetch product details");
+           }
+        };
+
+        document.addEventListener("DOMContaintLoader", () => {
+            const params = new URLSearchParams(window.location.search);
+
+            const productID = params.get("productID");
+            fetchSingleProduct(productID);
+        });
+    </script>
+  </body>
+</html>
